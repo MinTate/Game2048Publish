@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/main">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/score"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ffffffff"
+            android:typeface="monospace"
+            android:textStyle="bold|italic"
+            android:background="#50000000"/>
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ffffffff"
+            android:background="#50000000"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bestscore"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ffffffff"
+            android:background="#50000000" />
+
+        <TextView
+            android:id="@+id/tvBestScore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ffffffff"
+            android:background="#50000000"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnNewGame"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/newgame"
+        android:textColor="#ffffffff"
+        android:background="#50000000"/>
+
+    <FrameLayout
+        android:id="@+id/gameContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.jikexueyuan.game2048publish.GameView
+            android:id="@+id/gameView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </com.jikexueyuan.game2048publish.GameView>
+
+        <com.jikexueyuan.game2048publish.AnimLayer
+            android:id="@+id/animLayer"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </com.jikexueyuan.game2048publish.AnimLayer>
+    </FrameLayout>
+
+</LinearLayout><!-- From: file:/F:/Android/Game2048/app/src/main/res/layout/activity_main.xml -->
